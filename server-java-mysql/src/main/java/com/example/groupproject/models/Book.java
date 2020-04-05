@@ -11,7 +11,7 @@ public class Book {
 	}
 
 	public static void deleteBook(int book_id) throws SQLException {
-		String bookQuery = "FROM Mandark.book WHERE book_id =" + book_id;
+		String bookQuery = "DELETE FROM Mandark.book WHERE book_id =" + book_id;
 		BookRepository.makeQuery(bookQuery);
 	}
 
@@ -21,14 +21,15 @@ public class Book {
 		String bookQuery = "UPDATE Mandark.book SET book_id ='" + book_id + "', title='" + title + "', author='"
 				+ author + "', publisher='" + publisher + "', description='" + "', pub_date='" + pub_date
 				+ "', chk_out_date='null', chkd_out='false', length='" + length + "', genre='" + genre + "', language='"
-				+ language + "' WHERE book_id=" + book_id + ";";
+				+ language + "' WHERE book_id=" + book_id + "WHERE book_id=" + book_id + ";";
 		BookRepository.makeQuery(bookQuery);
 
 	}
 
 	public static void addBook(int book_id, String title, String author, String publisher, String description,
-			Date pub_date, Date chk_out_date, boolean chkd_out, String length, String genre, String language) throws SQLException {
-		String bookQuery = "INTO Mandark.book (book_id, title, author, publisher, description, pub_date, chk_out_date, chkd_out, length, genre, language) VALUES ('"
+			Date pub_date, Date chk_out_date, boolean chkd_out, String length, String genre, String language)
+			throws SQLException {
+		String bookQuery = "INSERT INTO Mandark.book (book_id, title, author, publisher, description, pub_date, chk_out_date, chkd_out, length, genre, language) VALUES ('"
 				+ book_id + "','" + title + "','" + author + "','" + publisher + "','" + description + "','" + pub_date
 				+ "','" + chk_out_date + "','" + chkd_out + "','" + length + "','" + genre + "','" + language + "');";
 		BookRepository.makeQuery(bookQuery);
