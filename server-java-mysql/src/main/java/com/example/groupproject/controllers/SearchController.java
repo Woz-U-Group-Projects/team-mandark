@@ -5,7 +5,7 @@ import java.sql.*;
 import com.example.groupproject.models.Book;
 
 public class SearchController {
-	public ResultSet byBookId(int book_id) throws SQLException {
+	public static ResultSet byBookId(int book_id) throws SQLException {
 		String bookFilter = "* FROM Mandark.book WHERE book_id IS = " + book_id;
 		return Book.getBook(bookFilter);
 	}
