@@ -18,6 +18,7 @@ public class GroupProjectApplication {
 		System.out.println("1. Books");
 		System.out.println("2. Users");
 		int choice = scanner.nextInt();
+	}}
 //		TODO: Change over console menu into a while loop and use a switch statement for the menu.
 		
 		
@@ -31,7 +32,7 @@ public class GroupProjectApplication {
 //			System.out.println("At any time type exit to 0.");
 //			System.out.println("1. Books");
 //			System.out.println("2. Users");
-//			int MySqlTable = scanner.nextInt();
+//			 MySqlTable = scanner.nextInt();
 //
 //			if (MySqlTable == 1) {
 //				System.out.println("Book table selected.");
@@ -43,7 +44,7 @@ public class GroupProjectApplication {
 //				System.out.println("3. Add");
 //				System.out.println("4. Update");
 //				System.out.println("5. Delete");
-//				int MySqlAction = scanner.nextInt();
+//				 MySqlAction = scanner.nextInt();
 //				if (MySqlAction == 1) {
 //					System.out.println("Called 1");
 ////					Searching in this if statement
@@ -84,4 +85,4 @@ public class GroupProjectApplication {
 //		
 //	}
 
-}
+
