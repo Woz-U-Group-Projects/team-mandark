@@ -5,7 +5,7 @@ import java.sql.*;
 public class ConnectionManager {
 	public static Connection getConnection() {
 		String url = "database-1.cnabirxcuxic.us-east-1.rds.amazonaws.com";
-		String driver = "com.mysql.jdbc.Driver";
+		String driver = "com.mysql.cj.jdbc.Driver";
 		String username = "admin";
 		String password = "J8S8NR4sR90nwkZE1pEg";
 		System.out.println("-------- MySQL JDBC Connection Demo ------------");
