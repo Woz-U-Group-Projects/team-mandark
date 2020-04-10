@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataBookDBService } from '../data-book-db.service'
+import { from } from 'rxjs';
+import { Books } from '../models/books';
 
 @Component({
   selector: 'app-db-books',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DbBooksComponent implements OnInit {
 
-  constructor() { }
+  books: Books[]
+
+  getBooks: void {
+    this.dataBookDBservice.getBook().subscribe(
+      b => this.book = b
+    )
+  }
+
+  constructor(private dataBookDBservice : DataBookDBService) { }
+ 
 
   ngOnInit() {
+    this.getBook();
   }
 
 }

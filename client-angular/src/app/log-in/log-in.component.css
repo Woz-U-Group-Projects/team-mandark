@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 
 
 header {
-    color: #f0ffff;
+    padding: 3px;
+    color: #f5f5dc;
     background-color: 	#dc143c;
-    justify-content: center; 
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    
 }
-#h3 {
-   font-style: italic;
+.header{
+    margin-left: 1em;
 }

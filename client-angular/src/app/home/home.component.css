@@ -1,25 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
-
-header {
-    padding: 3px;
-    color: #f5f5dc;
-    background-color: 	#dc143c;
-    font-family: 'Berkshire Swash', cursive;
-    display: flex;
-    
-}
-.header{
-    margin-left: 1em;
-    
-}
-nav{
-    float: right;
-}
-img {
-    width: 78em;
-    height: 35em;
-}
-footer {
-    background-color: #dc143c;
+.img{
+    background-image: url(../../assets/pexels-photo-590493.jpeg);
+    padding: 100%;
+    margin: 100%;
 }

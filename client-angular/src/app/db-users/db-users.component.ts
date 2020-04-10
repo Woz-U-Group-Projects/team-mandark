@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { dataUsersDBservice} from '../data-user-db.service'
 @Component({
   selector: 'app-db-users',
   templateUrl: './db-users.component.html',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DbUsersComponent implements OnInit {
 
-  constructor() { }
+  users: Users[]
+
+  getUsers: void {
+    this.dataUsersDBservice.getUsers().subscribe(
+      u => this.user = u
+    )
+
+  constructor(private dataUsersDBservice:) { }
 
   ngOnInit() {
+    this.getUsers();
   }
 
 }
