@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class ConnectionManager {
 	public static Connection getConnection() {
-		String url = "database-1.cnabirxcuxic.us-east-1.rds.amazonaws.com";
+		String url = "database-1.cnabirxcuxic.us-east-1.rds.amazonaws.com:3306";
 		String driver = "com.mysql.cj.jdbc.Driver";
 		String username = "admin";
 		String password = "J8S8NR4sR90nwkZE1pEg";
