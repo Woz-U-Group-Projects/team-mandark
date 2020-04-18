@@ -19,13 +19,14 @@ import { AdminAccountComponent } from './admin-account/admin-account.component';
 import { NavbarComponent } from './Shared/components/navbar/navbar.component';
 
 import { AccountModule } from "./modules/account/account.module";
+import { BookHistoryComponent } from './modules/account/components/book-history/book-history.component';
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, TaskDisplayComponent, LogInComponent, HomeComponent, LibraryComponent, UserAccountComponent, UserEditAccountComponent, DbUsersComponent, DbBooksComponent, AdminAccountComponent, NavbarComponent],
+  declarations: [AppComponent, TaskDisplayComponent, LogInComponent, HomeComponent, LibraryComponent, UserAccountComponent, UserEditAccountComponent, DbUsersComponent, DbBooksComponent, AdminAccountComponent, NavbarComponent, BookHistoryComponent],
   imports: [BrowserModule, AccountModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
