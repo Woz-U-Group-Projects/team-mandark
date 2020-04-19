@@ -12,11 +12,7 @@ import { NavbarComponent } from './Shared/components/navbar/navbar.component';
 
 
 @NgModule({
-<<<<<<< HEAD
-  declarations: [AppComponent, TaskDisplayComponent, LogInComponent, HomeComponent, LibraryComponent, UserAccountComponent, UserEditAccountComponent, DbUsersComponent, DbBooksComponent, AdminAccountComponent, NavbarComponent, BookHistoryComponent],
-=======
-  declarations: [AppComponent, NavbarComponent],
->>>>>>> e97434dc13afd69679fd55897bca27024089dff1
+  declarations: [AppComponent, NavbarComponent, BookHistoryComponent],
   imports: [BrowserModule, AccountModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
