@@ -47,7 +47,7 @@ const routes: Routes = [
     component: FooterComponent
   },
   {
-    path: 'header',
+    path: 'head',
     component: HeaderComponent
   },
   {
@@ -66,6 +66,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), CommonModule],
-  exports: [RouterModule]
+  exports: [RouterModule, ],
+  declarations: []
 })
 export class AppRoutingModule { }
