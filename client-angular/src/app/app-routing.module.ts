@@ -17,7 +17,11 @@ import { TeamInfoComponent } from './Shared/components/team-info/team-info.compo
 
 
 const routes: Routes = [
-
+  // { path: 'first-component', component: FirstComponent },
+  // { path: 'second-component', component: SecondComponent },
+  // { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
+  // { path: '**', component: FirstComponent },
+  // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ]
 
 @NgModule({
