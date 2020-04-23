@@ -12,11 +12,13 @@ import { FooterComponent } from './Shared/components/footer/footer.component';
 import { HeaderComponent } from './Shared/components/header/header.component';
 import { NavbarComponent } from './Shared/components/navbar/navbar.component';
 import { TeamInfoComponent } from './Shared/components/team-info/team-info.component';
+import { HomeViewComponent } from './modules/home/home-view/home-view.component';
 
 
 
 
 const routes: Routes = [
+  { path: 'home', component: HomeViewComponent }
   // { path: 'first-component', component: FirstComponent },
   // { path: 'second-component', component: SecondComponent },
   // { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`

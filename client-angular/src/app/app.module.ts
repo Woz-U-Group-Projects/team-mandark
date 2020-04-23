@@ -33,14 +33,15 @@ import { CreateUserComponent } from './modules/register/components/create-user/c
 import { AuthenticationComponent } from './Shared/components/authentication/authentication.component';
 import { FooterComponent } from './Shared/components/footer/footer.component';
 import { TeamInfoComponent } from './Shared/components/team-info/team-info.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
-  imports: [BrowserModule, AccountModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AccountModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule],
   declarations: [AppComponent, NavbarComponent, BookHistoryComponent, HeaderComponent, HomeViewComponent, AccountViewComponent, BookInfoViewComponent, ELibraryViewComponent, LoginViewComponent, RegisterViewComponent, FiltersComponent, SearchComponent, RecBooksComponent, UserLoginComponent, CreateUserComponent, AuthenticationComponent, FooterComponent, TeamInfoComponent],
-  providers: [FiltersService, SearchService, RecBooksService, UserLoginService, CreateUserService, BookService, UserService ],
+  providers: [FiltersService, SearchService, RecBooksService, UserLoginService, CreateUserService, BookService, UserService],
   bootstrap: [AppComponent]
-  
+
 })
 export class AppModule { }
 
