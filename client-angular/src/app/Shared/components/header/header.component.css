@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Lustria&family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Comfortaa:wght@500&family=Domine&family=Kosugi+Maru&family=Lustria&family=Syncopate&display=swap');
 
 header {
-    font-family: 'Lustria', serif;
+    font-family: 'Domine', serif;
     color: #f8f8ff;
     background-color: #800000;
     padding-left: 10px;
