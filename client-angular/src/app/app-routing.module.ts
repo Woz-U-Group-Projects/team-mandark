@@ -18,55 +18,11 @@ import { TeamInfoComponent } from './Shared/components/team-info/team-info.compo
 
 const routes: Routes = [
 
-  {
-    path: 'filters',
-    component: FiltersComponent
-  },
-  {
-    path: 'search',
-    component: SearchComponent
-  },
-  {
-    path: 'rec-books',
-    component: RecBooksComponent
-  },
-  {
-    path: 'user-login',
-    component: UserLoginComponent
-  },
-  {
-    path: 'create-user',
-    component: CreateUserComponent
-  },
-  {
-    path: 'authentication',
-    component: AuthenticationComponent
-  },
-  {
-    path: 'footer',
-    component: FooterComponent
-  },
-  {
-    path: 'head',
-    component: HeaderComponent
-  },
-  {
-    path: 'navbar',
-    component: NavbarComponent
-  },
-  {
-    path: 'team-info',
-    component: TeamInfoComponent
-  },
-  {
-    path: '',
-    component: TeamInfoComponent
-  }
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), CommonModule],
-  exports: [RouterModule, ],
+  exports: [RouterModule,],
   declarations: []
 })
 export class AppRoutingModule { }
