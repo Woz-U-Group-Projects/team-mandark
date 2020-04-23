@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^5.3.1",
     "json-server": "^0.16.1",
     "rxjs": "~6.4.0",
     "serve": "^11.3.0",
