@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Lustria&family=Syncopate&display=swap');
+
 header {
-    padding: 3px;
-    color: #f5f5dc;
-    background-color: 	#dc143c;
-    font-family: 'Barlow', sans-serif;
-    display: flex;
+    font-family: 'Lustria', serif;
+    color: #f8f8ff;
+    background-color: #800000;
+    padding-left: 10px;
 }
+h1 {
+    padding-top: 10px;
+}
+h4 {
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+.btn-group {
+   background-color: #800000;
+}    
+
+
