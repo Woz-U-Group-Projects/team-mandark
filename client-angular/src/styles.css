@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 
-
-
 body {
-    background-color: rgb(255, 246, 234);
+  background-color: rgb(255, 246, 234);
 }
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
