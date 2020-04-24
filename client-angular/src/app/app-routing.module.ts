@@ -13,14 +13,17 @@ import { HeaderComponent } from './Shared/components/header/header.component';
 import { NavbarComponent } from './Shared/components/navbar/navbar.component';
 import { TeamInfoComponent } from './Shared/components/team-info/team-info.component';
 import { HomeViewComponent } from './modules/home/home-view/home-view.component';
+import { LoginViewComponent } from './modules/login/login-view/login-view.component';
+import { RegisterViewComponent } from './register-view/register-view.component';
 
 
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeViewComponent }
-  // { path: 'first-component', component: FirstComponent },
+  { path: 'home', component: HomeViewComponent },
+  { path: 'login', component: LoginViewComponent },
   // { path: 'second-component', component: SecondComponent },
+  { path: 'register', component: RegisterViewComponent },
   // { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
   // { path: '**', component: FirstComponent },
   // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
