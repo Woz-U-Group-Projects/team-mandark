@@ -1,1 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Comfortaa:wght@500&family=Domine&family=Kosugi+Maru&family=Lustria&family=Syncopate&display=swap');
 
+
+
+.navbar-brand {
+    font-family: 'Syncopate', sans-serif;
+    margin-top: 17px;
+    font-size: 2em;
+}
