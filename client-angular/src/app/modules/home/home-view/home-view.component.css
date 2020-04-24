@@ -3,6 +3,7 @@
 .card-img {
     width: 100%;
     max-height: 550px;
+    filter: brightness(45%);
 }
 .card-img-overlay {
     font-family: 'Syncopate', sans-serif;
