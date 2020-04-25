@@ -1,3 +1,6 @@
+
+
+
 <div class="card bg-dark text-white">
   <img
     class="card-img"
@@ -5,16 +8,45 @@
     alt="Card image"
   />
   <div class="card-img-overlay">
-    <h2 class="card-title">
-      "IT IS LIKELY I WILL DIE<br />
-      NEXT TO A PILE OF THINGS<br />
+    <h3 class="card-title">
+      "IT IS LIKELY I WILL DIE NEXT TO A PILE OF THINGS<br>
       I WAS MEANING TO READ"
-    </h2>
-    <h3 class="card-text">- LEMONY SNICKET</h3>
+    </h3>
+    <h4 class="card-text">- LEMONY SNICKET</h4>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="la.jpg" alt="Los Angeles">
+          </div>
+          <div class="carousel-item">
+            <img src="chicago.jpg" alt="Chicago">
+          </div>
+          <div class="carousel-item">
+            <img src="ny.jpg" alt="New York">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
     <nav>
       <ul>
         <li><a href="#" routerLink="/register">REGISTER</a></li>
-        <li><a href="#" routerLink="/login">LOGIN</a></li>
       </ul>
     </nav>
   </div>

@@ -15,6 +15,7 @@ import { TeamInfoComponent } from './Shared/components/team-info/team-info.compo
 import { HomeViewComponent } from './modules/home/home-view/home-view.component';
 import { LoginViewComponent } from './modules/login/login-view/login-view.component';
 import { RegisterViewComponent } from './register-view/register-view.component';
+import { ELibraryViewComponent } from './modules/e-library/e-library-view/e-library-view.component';
 
 
 
@@ -22,7 +23,7 @@ import { RegisterViewComponent } from './register-view/register-view.component';
 const routes: Routes = [
   { path: 'home', component: HomeViewComponent },
   { path: 'login', component: LoginViewComponent },
-  // { path: 'second-component', component: SecondComponent },
+  { path: 'books', component: ELibraryViewComponent },
   { path: 'register', component: RegisterViewComponent },
   // { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
   // { path: '**', component: FirstComponent },
