@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Book } from '../../../../Shared/models/book'
+import { Book } from '../../../Shared/models/book';
 
 @Component({
-  selector: 'app-admin-view',
-  templateUrl: './admin-view.component.html',
-  styleUrls: ['./admin-view.component.css']
+  selector: 'app-view-books',
+  templateUrl: './view-books.component.html',
+  styleUrls: ['./view-books.component.css']
 })
-export class AdminViewComponent implements OnInit {
+export class ViewBooksComponent implements OnInit {
 
   private bookRoute = 'http://localhost:3000/book';
   public book: Book[];
@@ -21,10 +21,8 @@ export class AdminViewComponent implements OnInit {
       console.log('Book', this.book);
     })
   }
-  
 
   ngOnInit() {
     this.getBook();
   }
-
 }

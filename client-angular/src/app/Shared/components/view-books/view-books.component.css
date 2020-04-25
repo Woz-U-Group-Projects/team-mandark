@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Comfortaa:wght@500&family=Domine&family=Kosugi+Maru&family=Lustria&family=Syncopate&display=swap');
+
+
+.card-img {
+    width: 100%;
+    max-height: 550px;
+    filter: brightness(45%);
+    padding: 0px;
+}
+.card-img-overlay {
+    font-family: 'Syncopate', sans-serif;
+    padding-top: 2em;
+    color: ivory;
+}
+ul {
+    list-style-type: none;
+    font-size: 1.5em;
+}
