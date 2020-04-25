@@ -24,7 +24,7 @@ import { AccountViewComponent } from './modules/account/account-view/account-vie
 import { BookInfoViewComponent } from './modules/book-info/book-info-view/book-info-view.component';
 import { ELibraryViewComponent } from './modules/e-library/e-library-view/e-library-view.component';
 import { LoginViewComponent } from './modules/login/login-view/login-view.component';
-import { RegisterViewComponent } from './register-view/register-view.component';
+import { RegisterViewComponent } from './modules/register/register-view/register-view.component';
 import { FiltersComponent } from './modules/e-library/components/filters/filters.component';
 import { SearchComponent } from './modules/e-library/components/search/search.component';
 import { RecBooksComponent } from './modules/home/components/rec-books/rec-books.component';
@@ -34,11 +34,13 @@ import { AuthenticationComponent } from './Shared/components/authentication/auth
 import { FooterComponent } from './Shared/components/footer/footer.component';
 import { TeamInfoComponent } from './Shared/components/team-info/team-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserViewComponent } from './modules/account/account-view/user-view/user-view.component';
+import { AdminViewComponent } from './modules/account/account-view/admin-view/admin-view.component';
 
 
 @NgModule({
   imports: [BrowserModule, AccountModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule],
-  declarations: [AppComponent, NavbarComponent, BookHistoryComponent, HeaderComponent, HomeViewComponent, AccountViewComponent, BookInfoViewComponent, ELibraryViewComponent, LoginViewComponent, RegisterViewComponent, FiltersComponent, SearchComponent, RecBooksComponent, UserLoginComponent, CreateUserComponent, AuthenticationComponent, FooterComponent, TeamInfoComponent],
+  declarations: [AppComponent, NavbarComponent, BookHistoryComponent, HeaderComponent, HomeViewComponent, AccountViewComponent, BookInfoViewComponent, ELibraryViewComponent, LoginViewComponent, RegisterViewComponent, FiltersComponent, SearchComponent, RecBooksComponent, UserLoginComponent, CreateUserComponent, AuthenticationComponent, FooterComponent, TeamInfoComponent, UserViewComponent, AdminViewComponent],
   providers: [FiltersService, SearchService, RecBooksService, UserLoginService, CreateUserService, BookService, UserService],
   bootstrap: [AppComponent]
 

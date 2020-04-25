@@ -14,8 +14,9 @@ import { NavbarComponent } from './Shared/components/navbar/navbar.component';
 import { TeamInfoComponent } from './Shared/components/team-info/team-info.component';
 import { HomeViewComponent } from './modules/home/home-view/home-view.component';
 import { LoginViewComponent } from './modules/login/login-view/login-view.component';
-import { RegisterViewComponent } from './register-view/register-view.component';
+import { RegisterViewComponent } from './modules/register/register-view/register-view.component';
 import { ELibraryViewComponent } from './modules/e-library/e-library-view/e-library-view.component';
+import { UserViewComponent } from './modules/account/account-view/user-view/user-view.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'login', component: LoginViewComponent },
   { path: 'books', component: ELibraryViewComponent },
   { path: 'register', component: RegisterViewComponent },
+  { path: 'user-view', component: UserViewComponent },
   // { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
   // { path: '**', component: FirstComponent },
   // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page

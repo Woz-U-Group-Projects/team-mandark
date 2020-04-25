@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Book } from '../../../Shared/models/book';
+import { Book } from '../../../../Shared/models/book'
 
 @Component({
-  selector: 'app-e-library-view',
-  templateUrl: './e-library-view.component.html',
-  styleUrls: ['./e-library-view.component.css']
+  selector: 'app-user-view',
+  templateUrl: './user-view.component.html',
+  styleUrls: ['./user-view.component.css']
 })
-export class ELibraryViewComponent implements OnInit {
+export class UserViewComponent implements OnInit {
 
   private bookRoute = 'http://localhost:3000/book';
   public book: Book[];
@@ -27,4 +27,3 @@ export class ELibraryViewComponent implements OnInit {
   }
 
 }
-

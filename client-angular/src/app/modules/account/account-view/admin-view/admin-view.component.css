@@ -11,8 +11,15 @@
     font-family: 'Syncopate', sans-serif;
     padding-top: 2em;
     color: ivory;
+    text-align: center;
 }
-ul {
+h3{
+    padding-left: 0em;
+}
+nav{
+    padding-bottom: 15em;
+}
+p {
     list-style-type: none;
     font-size: 1.5em;
 }
