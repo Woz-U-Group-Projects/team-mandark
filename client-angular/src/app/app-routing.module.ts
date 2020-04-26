@@ -36,20 +36,20 @@ const routes: Routes = [
   { path: 'home', component: HomeViewComponent },
   { path: 'login', component: LoginViewComponent },
   { path: 'register', component: RegisterViewComponent },
-  { path: 'user-view', component: UserViewComponent },
+  { path: 'userHome', component: UserViewComponent },
   { path: 'admin', component: AdminViewComponent },
   
   
   
   // Admin routes
-  { path: 'book-add', component: AddBookComponent },
-  { path: 'book-view', component: ELibraryViewComponent },
-  { path: 'book-delete', component: DeleteBookComponent },
-  { path: 'book-edit', component: EditBookComponent },
-  { path: 'user-add', component: AddUserComponent },
-  { path: 'user-view', component: ViewUserComponent },
-  { path: 'user-delete', component: DeleteUserComponent },
-  { path: 'user-edit', component: EditUserComponent },
+  { path: 'bookAdd', component: AddBookComponent },
+  { path: 'bookView', component: ELibraryViewComponent },
+  { path: 'bookDelete', component: DeleteBookComponent },
+  { path: 'bookEdit', component: EditBookComponent },
+  { path: 'userAdd', component: AddUserComponent },
+  { path: 'userView', component: ViewUserComponent },
+  { path: 'userDelete', component: DeleteUserComponent },
+  { path: 'userEdit', component: EditUserComponent },
   
 
   
