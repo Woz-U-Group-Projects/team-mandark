@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Book } from '../../../Shared/models/book';
+import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-view-books',
@@ -10,13 +11,12 @@ import { Book } from '../../../Shared/models/book';
 })
 export class ViewBooksComponent implements OnInit {
 
-  private bookRoute = 'http://localhost:3000/book';
   public book: Book[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private bookService: BookService) { }
 
-  getBook(){
-    this.http.get<Book[]>(this.bookRoute).subscribe(book => {
+  getBook(): void{ 
+    this.bookService.getBook().subscribe(book => {
       this.book = book;
       console.log('Book', this.book);
     })

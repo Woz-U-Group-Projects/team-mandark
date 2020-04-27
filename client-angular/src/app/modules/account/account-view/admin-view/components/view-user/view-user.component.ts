@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { User } from '../../../../../../Shared/models/user'
+import { UserService } from 'src/app/Shared/services/user.service';
 
 @Component({
   selector: 'app-view-user',
@@ -10,13 +11,12 @@ import { User } from '../../../../../../Shared/models/user'
 })
 export class ViewUserComponent implements OnInit {
 
-  private bookRoute = 'http://localhost:3100/user';
   public user: User[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private userService: UserService) { }
 
-  getUser(){
-    this.http.get<User[]>(this.bookRoute).subscribe(user => {
+  getUser(): void{
+    this.userService.getUser().subscribe(user => {
       this.user = user;
       console.log('User', this.user);
     })

@@ -1,11 +1,11 @@
-<div class="card bg-dark text-white">
+<div class="card">
 
     <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
     <div class="card-img-overlay">
         <h1>LIBARAY</h1>
         <ul>
             <li *ngFor="let book of book">
-                <p>{{ book.book_id + 1 }}, {{book.title}} author {{book.author}}</p>  
+                <p>{{ book.title }}</p>  
             </li>
         </ul>
 
