@@ -1,4 +1,3 @@
-<p>edit-book works!</p>
 <div class="card bg-dark text-white">
 
     <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
@@ -7,7 +6,7 @@
         <ul>
             <li *ngFor="let user of user">
                 <a> {{ book.title }}</a>  
-                <a [routerLink]= "['/bookEdit', book.book_id]">EDIT BOOK</a>
+                <a [routerLink]= "['/bookEdit', title]">EDIT BOOK</a>
             </li>
         </ul>
     

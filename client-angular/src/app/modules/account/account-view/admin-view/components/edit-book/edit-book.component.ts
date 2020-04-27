@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from 'src/app/Shared/services/book.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Book } from 'src/app/Shared/models/book';
 
 @Component({
   selector: 'app-edit-book',
@@ -8,9 +10,18 @@ import { BookService } from 'src/app/Shared/services/book.service';
 })
 export class EditBookComponent implements OnInit {
 
-  constructor(private bookService: BookService) { }
+  editBook: Book = new Book();
+
+  constructor(private bookService: BookService, 
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(param => {
+      this.bookService
+      .getBook(+param["title"])
+      .subscribe(book => (this.editBook = book))
+    })
   }
 
 }
