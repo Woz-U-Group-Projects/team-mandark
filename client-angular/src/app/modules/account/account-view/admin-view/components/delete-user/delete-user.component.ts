@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/Shared/services/user.service';
+import { User } from 'src/app/Shared/models/user';
 
 @Component({
   selector: 'app-delete-user',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteUserComponent implements OnInit {
 
-  constructor() { }
+  public user: User[];
+
+  constructor(private userService: UserService) { }
+
+  getUser(): void{
+    this.userService.getUsers().subscribe(user => {
+      this.user = user;
+      console.log('User', this.user);
+    })
+  }
 
   ngOnInit() {
+    this.getUser();
   }
 
 }

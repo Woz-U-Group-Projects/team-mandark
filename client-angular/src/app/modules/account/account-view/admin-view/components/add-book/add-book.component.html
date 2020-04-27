@@ -3,12 +3,13 @@
     <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
     <div class="card-img-overlay">
         <h1>ADD BOOKS TO LIBRARY</h1>
-        BOOK ID:<input><br>
-        TITLE:<input><br>
-        AUTHOR:<input><br>
-        PUBLISHER:<input><br>
-        DESCRIPTION:<input><br>
-        DATE PUBLISHED:<input><br>
+        BOOK ID:<input [(ngModel)]="newBook.book_id"><br>
+        TITLE:<input [(ngModel)]="newBook.title"><br>
+        AUTHOR:<input [(ngModel)]="newBook.author"><br>
+        PUBLISHER:<input [(ngModel)]="newBook.publisher"><br>
+        DESCRIPTION:<input [(ngModel)]="newBook.description"><br>
+        DATE PUBLISHED:<input [(ngModel)]="newBook.pub_date"><br>
+        <button (click)="assBook()" type="button" class="btn">SUBMIT</button>
         
 
     

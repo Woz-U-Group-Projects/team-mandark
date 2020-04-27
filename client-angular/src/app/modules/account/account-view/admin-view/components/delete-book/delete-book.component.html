@@ -1,12 +1,14 @@
-<p>delete-book works!</p>
+
 <div class="card bg-dark text-white">
 
     <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
     <div class="card-img-overlay">
-        <h1>USERS</h1>
+        
+        <h1>DELETE BOOK FROM LIBRARY</h1>
         <ul>
-            <li *ngFor="let user of user">
-                <a> {{ user.user_id  }}, {{user.username}} </a>  
+            <li *ngFor="let book of book">
+                <a> {{book.title}} </a>  
+                <button (click)="deleteBook(book.book_id)">x</button>
             </li>
         </ul>
     

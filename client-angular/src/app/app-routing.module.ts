@@ -28,6 +28,7 @@ import { AddUserComponent } from './modules/account/account-view/admin-view/comp
 import { DeleteUserComponent } from './modules/account/account-view/admin-view/components/delete-user/delete-user.component';
 import { EditUserComponent } from './modules/account/account-view/admin-view/components/edit-user/edit-user.component';
 import { ViewUserComponent } from './modules/account/account-view/admin-view/components/view-user/view-user.component';
+import { ViewBooksComponent } from './Shared/components/view-books/view-books.component';
 
 
 
@@ -45,7 +46,7 @@ const routes: Routes = [
   
   // Admin routes
   { path: 'bookAdd', component: AddBookComponent },
-  { path: 'bookView', component: ELibraryViewComponent },
+  { path: 'bookView', component: ViewBooksComponent },
   { path: 'bookDelete', component: DeleteBookComponent },
   { path: 'bookEdit', component: EditBookComponent },
   { path: 'userAdd', component: AddUserComponent },

@@ -3,13 +3,14 @@
     <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
     <div class="card-img-overlay">
         <h1>ADD A USER</h1>
-        USER ID:<input><br>
-        USERNAME:<input><br>
-        PASSWORD:<input><br>
-        NUMBER OF BOOKS CHECKED OUT:<input><br>
-        OVERDUE BOOKS:<input><br>
-        HISTORY:<input><br>
-        IS THE USER AN ADMIN:<input><br>
+        USER ID:<input [(ngModel)]="newUser.user_id"><br>
+        USERNAME:<input [(ngModel)]="newUser.username"><br>
+        PASSWORD:<input [(ngModel)]="newUser.user_pin"><br>
+        NUMBER OF BOOKS CHECKED OUT:<input [(ngModel)]="newUser.num_of_books"><br>
+        OVERDUE BOOKS:<input [(ngModel)]="newUser.overdue_book"><br>
+        HISTORY:<input [(ngModel)]="newUser.history"><br>
+        IS THE USER AN ADMIN:<input [(ngModel)]="newUser.is_admin"><br>
+        <button (click)="addBook()" type="button" class="btn">SUBMIT</button>
         
     
 

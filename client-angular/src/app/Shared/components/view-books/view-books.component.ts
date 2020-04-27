@@ -15,14 +15,14 @@ export class ViewBooksComponent implements OnInit {
 
   constructor(private bookService: BookService) { }
 
-  getBook(): void{ 
-    this.bookService.getBook().subscribe(book => {
+  getBooks(): void{ 
+    this.bookService.getBooks().subscribe(book => {
       this.book = book;
       console.log('Book', this.book);
     })
   }
 
   ngOnInit() {
-    this.getBook();
+    this.getBooks();
   }
 }

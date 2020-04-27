@@ -15,15 +15,15 @@ export class ViewUserComponent implements OnInit {
 
   constructor(private userService: UserService) { }
 
-  getUser(): void{
-    this.userService.getUser().subscribe(user => {
+  getUsers(): void{
+    this.userService.getUsers().subscribe(user => {
       this.user = user;
       console.log('User', this.user);
     })
   }
 
   ngOnInit() {
-    this.getUser();
+    this.getUsers();
   }
 
 }

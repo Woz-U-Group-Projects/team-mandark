@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+
+import { Book } from 'src/app/Shared/models/book';
+import { BookService } from 'src/app/Shared/services/book.service';
 
 @Component({
   selector: 'app-add-book',
@@ -7,7 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddBookComponent implements OnInit {
 
-  constructor() { }
+  newBook: Book = new Book();
+
+  addBook() {
+    this.bookService
+    .addBook(this.newBook)
+    .subscribe(book=> this.router.navigate(["bookView"]));
+  }
+
+  constructor(private bookService: BookService, private router : Router) { }
 
   ngOnInit() {
   }
