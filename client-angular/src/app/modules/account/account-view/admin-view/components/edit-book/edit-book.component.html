@@ -6,7 +6,8 @@
         <h1>EDIT BOOK IN LIBRARY</h1>
         <ul>
             <li *ngFor="let user of user">
-                <a> {{ user.user_id  }}, {{user.username}} </a>  
+                <a> {{ book.title }}</a>  
+                <a [routerLink]= "['/bookEdit', book.book_id]">EDIT BOOK</a>
             </li>
         </ul>
     

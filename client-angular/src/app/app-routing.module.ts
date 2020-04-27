@@ -48,11 +48,11 @@ const routes: Routes = [
   { path: 'bookAdd', component: AddBookComponent },
   { path: 'bookView', component: ViewBooksComponent },
   { path: 'bookDelete', component: DeleteBookComponent },
-  { path: 'bookEdit', component: EditBookComponent },
+  { path: 'bookEdit/:book_id', component: EditBookComponent },
   { path: 'userAdd', component: AddUserComponent },
   { path: 'userView', component: ViewUserComponent },
   { path: 'userDelete', component: DeleteUserComponent },
-  { path: 'userEdit', component: EditUserComponent },
+  { path: 'userEdit/:user_id', component: EditUserComponent },
   
 
   
