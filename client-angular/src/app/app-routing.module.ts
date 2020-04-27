@@ -33,6 +33,8 @@ import { ViewUserComponent } from './modules/account/account-view/admin-view/com
 
 
 const routes: Routes = [
+
+  { path: '', component: HomeViewComponent },
   { path: 'home', component: HomeViewComponent },
   { path: 'login', component: LoginViewComponent },
   { path: 'register', component: RegisterViewComponent },
