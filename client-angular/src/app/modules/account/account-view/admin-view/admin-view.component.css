@@ -11,6 +11,10 @@
     font-family: 'Syncopate', sans-serif;
     padding-top: 2em;
     color: ivory;
+    text-align: center;
+}
+nav{
+    padding-bottom: 15em;
 }
 ul {
     list-style-type: none;

@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Book } from '../../../../Shared/models/book'
+
+@Component({
+  selector: 'app-admin-view',
+  templateUrl: './admin-view.component.html',
+  styleUrls: ['./admin-view.component.css']
+})
+export class AdminViewComponent implements OnInit {
+
+  
+
+  constructor() { }
+
+  
+
+  ngOnInit() {
+    
+  }
+
+}

@@ -1,19 +1,32 @@
 {
-  "posts": [
+  "book": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "book_id": 1,
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "publisher": "Scary Timme Publishing",
+      "description": "Its scary",
+      "pub_date": "11/24/1891",
+      "chk_out_date": "00/00/0000"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "book_id": 2,
+      "title": "Yippy, The Golden Dog",
+      "author": "Kate Perry",
+      "publisher": "Doggie Dog World Publishing",
+      "description": "Its about a dog",
+      "pub_date": "11/24/1891",
+      "chk_out_date": "00/00/0000"
+    },
+    {
+      "book_id": 3,
+      "title": "I AM HOLLOWOOD",
+      "author": "HE IS LEGEND",
+      "publisher": "TOOTH & NAIL",
+      "description": "ITS ACTULLY A RECORD",
+      "pub_date": "11/24/1891",
+      "chk_out_date": "00/00/0000"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
+  
 }

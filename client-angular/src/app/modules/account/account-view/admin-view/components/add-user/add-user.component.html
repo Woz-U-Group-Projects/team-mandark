@@ -1,0 +1,16 @@
+<p>add-user works!</p>
+<div class="card bg-dark text-white">
+
+    <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
+    <div class="card-img-overlay">
+        <h1>DELETE BOOK TO LIBRARY</h1>
+        <ul>
+            <li *ngFor="let user of user">
+                <a> {{ user.user_id  }}, {{user.username}} </a>  
+            </li>
+        </ul>
+    
+
+        <a href="#" routerLink="/admin">BACK</a>
+    </div>    
+</div>

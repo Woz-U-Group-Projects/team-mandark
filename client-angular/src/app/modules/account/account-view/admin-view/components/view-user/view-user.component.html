@@ -2,14 +2,18 @@
 
     <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
     <div class="card-img-overlay">
-        <h1>LIBARAY</h1>
+        <h1>USERS</h1>
         <ul>
-            <li *ngFor="let book of book">
-                <p>{{ book.id + 1 }}, {{book.title}} AUTHOR {{book.author}}</p>  
+            <li *ngFor="let user of user">
+                <a> {{ user.user_id  }}, {{user.username}} </a>  
             </li>
         </ul>
-        
+    
 
-        
-    </div>
+        <a href="#" routerLink="/admin">BACK</a>
+    </div>    
 </div>
+        
+    
+
+

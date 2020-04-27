@@ -14,8 +14,20 @@ import { NavbarComponent } from './Shared/components/navbar/navbar.component';
 import { TeamInfoComponent } from './Shared/components/team-info/team-info.component';
 import { HomeViewComponent } from './modules/home/home-view/home-view.component';
 import { LoginViewComponent } from './modules/login/login-view/login-view.component';
-import { RegisterViewComponent } from './register-view/register-view.component';
+import { RegisterViewComponent } from './modules/register/register-view/register-view.component';
+
+
+// Admin Routes
 import { ELibraryViewComponent } from './modules/e-library/e-library-view/e-library-view.component';
+import { UserViewComponent } from './modules/account/account-view/user-view/user-view.component';
+import { AdminViewComponent } from './modules/account/account-view/admin-view/admin-view.component';
+import { AddBookComponent } from './modules/account/account-view/admin-view/components/add-book/add-book.component';
+import { DeleteBookComponent } from './modules/account/account-view/admin-view/components/delete-book/delete-book.component';
+import { EditBookComponent } from './modules/account/account-view/admin-view/components/edit-book/edit-book.component';
+import { AddUserComponent } from './modules/account/account-view/admin-view/components/add-user/add-user.component';
+import { DeleteUserComponent } from './modules/account/account-view/admin-view/components/delete-user/delete-user.component';
+import { EditUserComponent } from './modules/account/account-view/admin-view/components/edit-user/edit-user.component';
+import { ViewUserComponent } from './modules/account/account-view/admin-view/components/view-user/view-user.component';
 
 
 
@@ -25,8 +37,24 @@ const routes: Routes = [
   { path: '', component: HomeViewComponent },
   { path: 'home', component: HomeViewComponent },
   { path: 'login', component: LoginViewComponent },
-  { path: 'books', component: ELibraryViewComponent },
   { path: 'register', component: RegisterViewComponent },
+  { path: 'userHome', component: UserViewComponent },
+  { path: 'admin', component: AdminViewComponent },
+  
+  
+  
+  // Admin routes
+  { path: 'bookAdd', component: AddBookComponent },
+  { path: 'bookView', component: ELibraryViewComponent },
+  { path: 'bookDelete', component: DeleteBookComponent },
+  { path: 'bookEdit', component: EditBookComponent },
+  { path: 'userAdd', component: AddUserComponent },
+  { path: 'userView', component: ViewUserComponent },
+  { path: 'userDelete', component: DeleteUserComponent },
+  { path: 'userEdit', component: EditUserComponent },
+  
+
+  
   // { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
   // { path: '**', component: FirstComponent },
   // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
