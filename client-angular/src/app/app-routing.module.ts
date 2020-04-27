@@ -21,6 +21,8 @@ import { ELibraryViewComponent } from './modules/e-library/e-library-view/e-libr
 
 
 const routes: Routes = [
+
+  { path: '', component: HomeViewComponent },
   { path: 'home', component: HomeViewComponent },
   { path: 'login', component: LoginViewComponent },
   { path: 'books', component: ELibraryViewComponent },
