@@ -3,13 +3,21 @@
     <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
     <div class="card-img-overlay">
         <h2>LOGIN</h2>
+
+      <div *ngIf="token.length == 0">
+        <div style="color: #ff0000; font-weight: bold;">{{(error ? error : '')}}</div>
+
         <form class="w3-container w3-light-grey">
-            <label>USER NAME</label><br>
-            <input class="w3-input w3-border-0" type="text" ><br>
-          
-            <label>PASSWORD</label><br>
-            <input class="w3-input w3-border-0" type="text"><br>
-            <button type="button" class="btn">SUBMIT</button>
+          <label htmlFor="username">Username:</label><br>
+          <input type="text" id="username" name="username" [(ngModel)]="LoginModule.username" /><br>
+
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="LoginModule.password" /><br>
+            <button type="button" class="btn" (click)="onLogin()">SUBMIT</button>
           </form>
     </div>
+      <div *ngIf="token.length > 0">
+        Logged In.
+      </div>
+</div>
 </div>

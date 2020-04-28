@@ -2,7 +2,7 @@ package com.example.groupproject.models;
 
 import java.sql.*;
 
-public class User {
+public class Users {
 	public static ResultSet getUser(int user_id) throws SQLException {
 		String userQuery = "SELECT * FROM Mandark.user WHERE user_id=" + user_id;
 		return UserRepository.findUser(userQuery);

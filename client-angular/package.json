@@ -21,15 +21,10 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
-
-    "@ng-bootstrap/ng-bootstrap": "^5.3.1",
-
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.4.1",
-
     "jquery": "^3.5.0",
-
     "json-server": "^0.16.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.4.0",

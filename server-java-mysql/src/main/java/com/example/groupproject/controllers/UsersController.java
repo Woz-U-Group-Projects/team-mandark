@@ -7,7 +7,7 @@ import com.example.groupproject.models.User;
 
 @Controller
 @RequestMapping
-public class UserController {
+public class UsersController {
 	public ResultSet getUser(int user_id) throws SQLException {
 		return User.getUser(user_id);
 	}
