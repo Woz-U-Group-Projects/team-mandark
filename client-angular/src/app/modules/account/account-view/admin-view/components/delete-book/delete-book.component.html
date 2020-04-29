@@ -1,9 +1,5 @@
-
-<div class="card bg-dark text-white">
-
-    <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
-    <div class="card-img-overlay">
-        
+<div class="bg">
+    <div class="header">
         <h1>DELETE BOOK FROM LIBRARY</h1>
         <ul>
             <li *ngFor="let book of book">
@@ -11,8 +7,7 @@
                 <button (click)="deleteBook(book.book_id)">x</button>
             </li>
         </ul>
-    
+    </div>  
+</div>       
+      
 
-        <a href="#" routerLink="/admin">BACK</a>
-    </div>    
-</div>

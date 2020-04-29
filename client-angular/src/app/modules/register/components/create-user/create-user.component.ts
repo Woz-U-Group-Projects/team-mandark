@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { RegisterModule} from '../../register.module';
+import { User } from '../../../../Shared/models/user'
 
 @Component({
   selector: 'app-create-user',

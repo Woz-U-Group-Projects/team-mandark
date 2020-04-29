@@ -1,7 +1,5 @@
-<div class="card bg-dark text-white">
-
-    <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
-    <div class="card-img-overlay">
+<div class="bg">
+    <div class="header">
         <h1>EDIT BOOK IN LIBRARY</h1>
         <ul>
             <li *ngFor="let user of user">
@@ -9,8 +7,6 @@
                 <a [routerLink]= "['/bookEdit', title]">EDIT BOOK</a>
             </li>
         </ul>
-    
-
-        <a href="#" routerLink="/admin">BACK</a>
-    </div>    
-</div>
+        
+    </div>  
+</div>     
