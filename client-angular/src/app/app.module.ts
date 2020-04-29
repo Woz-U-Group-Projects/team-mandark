@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AccountModule } from "./modules/account/account.module";
@@ -49,7 +49,7 @@ import { EditUserComponent } from './modules/account/account-view/admin-view/com
 @NgModule({
   imports: [BrowserModule, AccountModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule],
   declarations: [AppComponent, NavbarComponent, BookHistoryComponent, HeaderComponent, HomeViewComponent, AccountViewComponent, BookInfoViewComponent, ELibraryViewComponent, LoginViewComponent, RegisterViewComponent, FiltersComponent, SearchComponent, RecBooksComponent, UserLoginComponent, CreateUserComponent, AuthenticationComponent, FooterComponent, TeamInfoComponent, UserViewComponent, AdminViewComponent, AddBookComponent, DeleteBookComponent, ViewBooksComponent, EditBookComponent, ViewUserComponent, AddUserComponent, DeleteUserComponent, EditUserComponent],
-  providers: [FiltersService, SearchService, RecBooksService, UserLoginService, CreateUserService, BookService, UserService],
+  providers: [FiltersService, SearchService, RecBooksService, UserLoginService, CreateUserService, BookService, UserService, HttpClient],
   bootstrap: [AppComponent]
 
 })

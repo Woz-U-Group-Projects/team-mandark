@@ -4,7 +4,7 @@ import java.sql.*;
 
 import com.example.groupproject.controllers.ConnectionManager;
 
-public interface UserRepository {
+public interface UsersRepository {
 	public static ResultSet findUser(String userQuery) throws SQLException {
 		Connection con = ConnectionManager.getConnection();
 		Statement stmt = con.createStatement();

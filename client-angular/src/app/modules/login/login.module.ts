@@ -14,6 +14,9 @@ import { FooterComponent } from 'src/app/Shared/components/footer/footer.compone
   imports: [CommonModule],
   declarations: [UserLoginComponent, NavbarComponent, HeaderComponent, FooterComponent],
   providers: [UserLoginService]
-  
+
 })
-export class LoginModule { }
+export class LoginModule {
+  username: string;
+  password: string;
+}
