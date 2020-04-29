@@ -28,18 +28,20 @@
   </div>
 </nav>
 <div class="bg">
-  <div class="header">
-    <h2>REGISTER</h2>
+  <div class="col-3"></div>
+  <div class="col-3">
+    
       <div *ngIf="token.length == 0">
         <div style="color: #ff0000; font-weight: bold;">{{(error ? error : '')}}</div>
 
-        <form class="w3-container w3-light-grey">
-          <label htmlFor="username">Username:</label><br>
+        <form class="col-3">
+          <label htmlFor="username"><a>Username</a></label><br>
           <input type="text" id="username" name="username" [(ngModel)]="LoginModule.username" /><br>
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password"><a>Password</a></label>
           <input type="password" id="password" name="password" [(ngModel)]="LoginModule.password" /><br>
-          <button type="button" class="btn" (click)="onLogin()">SUBMIT</button>
+          <button type="button" class="btn" (click)="onLogin()"><a>REGISTER</a></button>
         </form>
+        <div class="col-3"></div> 
     </div>  
 </div>     
