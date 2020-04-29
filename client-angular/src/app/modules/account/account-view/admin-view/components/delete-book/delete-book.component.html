@@ -19,7 +19,7 @@
           <h1><a>DELETE BOOK FROM LIBRARY</a></h1>
           <ul>
               <li *ngFor="let book of book">
-                  <a> {{book.title}} </a>  
+                  <a>{{book.title}}</a>  
                   <button class="x" (click)="deleteBook(book.book_id)"><a>delete</a></button>
               </li>
           </ul>

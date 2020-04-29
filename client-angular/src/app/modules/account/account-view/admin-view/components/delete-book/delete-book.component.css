@@ -42,3 +42,6 @@ button {
   border: transparent;
   background: transparent;
 }
+h1 {
+  text-decoration: underline;
+}

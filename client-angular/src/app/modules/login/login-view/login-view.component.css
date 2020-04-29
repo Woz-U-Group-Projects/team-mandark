@@ -48,10 +48,13 @@ a {
   a {
     color: ivory;
     font-family: 'Syncopate', sans-serif;
+    text-align: center;
   }
 h2 {
     text-decoration: underline;
     text-emphasis-style: bold ;
+    text-align: center;
+    padding-left: 50px;
 }
 input{
     background: transparent;
@@ -60,9 +63,28 @@ input{
     border-right: transparent;
     border-left: transparent;
 }
+.col{
+  align-items: center;
+  
+
+}
+.row{
+  font-family: 'Syncopate', sans-serif;
+  color: ivory;
+  margin-top: 151px ;
+  margin-left: 624px;
+  text-align: center;
+}
+form {
+  padding-top: 40px;
+}
+.pw{
+  padding-top: 10px;
+}
 .btn {
     color: rgb(252, 252, 243);
     transition-duration: 0.4s;
+    
 }
 .btn:hover{
     background-color: rgb(250, 250, 227);; /* Green */
