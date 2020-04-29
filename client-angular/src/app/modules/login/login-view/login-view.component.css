@@ -15,12 +15,7 @@ html {
     margin-top: 17px;
     font-size: 2em;
     color: ivory;
-}
-a {
-    color: ivory;
-    font-family: 'Syncopate', sans-serif;
-}
-.bg {
+}.bg {
   background-image: url("../../../../assets/pexels-photo-590493.jpeg");
   height: 100%;
   background-position: center;
@@ -65,8 +60,6 @@ input{
 }
 .col{
   align-items: center;
-  
-
 }
 .row{
   font-family: 'Syncopate', sans-serif;
