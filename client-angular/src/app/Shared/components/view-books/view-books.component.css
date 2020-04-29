@@ -8,6 +8,7 @@ html {
 .navbar  {
     background-color: rgb(32, 32, 32);
     font-family: 'Syncopate', sans-serif;
+    color: ivory;
 }
 .navbar-brand {
     font-family: 'Syncopate', sans-serif;
@@ -23,18 +24,33 @@ html {
   background-size: cover;
   border: solid ivory 2px;
 }
-.header {
+.row {
+    margin-top: 150px;
+}
+.col {
     color:ivory;
     font-family: 'Syncopate', sans-serif;
     padding-top: 20px;
-    border: solid ivory 2px;
     margin: 20px;
+    
 }
 a {
     color: ivory;
     font-family: 'Syncopate', sans-serif;
 }
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
 ul {
     list-style-type: none;
     font-size: 1.5em;
+    text-align: center;
+    
+}
+li {
+    padding-right: 50px;
+}
+.back{
+    margin-left: 150px;
 }
