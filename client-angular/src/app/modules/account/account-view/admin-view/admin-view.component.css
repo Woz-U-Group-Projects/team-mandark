@@ -26,3 +26,13 @@ a {
     background-size: cover;
     border: solid ivory 2px;
   }
+  .options{
+    margin-top:250px;
+    padding-right: 100px;
+  }
+  ul {
+    list-style-type: none;
+    font-size: 2em;
+    text-align: center;
+  }
+  
