@@ -4,6 +4,20 @@ body,
 html {
   height: 100%;
 }
+.navbar  {
+  background-color: rgb(32, 32, 32);
+  font-family: 'Syncopate', sans-serif;
+}
+.navbar-brand {
+  font-family: 'Syncopate', sans-serif;
+  margin-top: 17px;
+  font-size: 2em;
+  color: ivory;
+}
+a {
+  color: ivory;
+  font-family: 'Syncopate', sans-serif;
+}
 .bg {
     background-image: url("../../../../../assets/pexels-photo-590493.jpeg");
     height: 100%;

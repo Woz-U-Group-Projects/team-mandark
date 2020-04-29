@@ -1,23 +1,41 @@
-<div class="card bg-dark text-white">
-
-    <img class="card-img" src="../../../../assets/pexels-photo-590493-1 2.jpeg" alt="Card image">
-    <div class="card-img-overlay">
-        <h2>LOGIN</h2>
+<nav class="navbar navbar-expand-md">
+  <!-- Brand -->
+  <h1 class="navbar-brand" href="#">eLIBRARY</h1>
+  <!-- Navbar links -->
+  <div
+    class="collapse navbar-collapse justify-content-end"
+    id="collapsibleNavbar"
+  >
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-link" href="#" routerLink="/bookView">BOOKS</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="bg">
+  <div class="header">
+    <h2>LOGIN</h2>
 
       <div *ngIf="token.length == 0">
         <div style="color: #ff0000; font-weight: bold;">{{(error ? error : '')}}</div>
 
         <form class="w3-container w3-light-grey">
-          <label htmlFor="username">Username:</label><br>
+          <label htmlFor="username">USERNAME</label><br>
           <input type="text" id="username" name="username" [(ngModel)]="LoginModule.username" /><br>
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">PASSWORD</label>
           <input type="password" id="password" name="password" [(ngModel)]="LoginModule.password" /><br>
-            <button type="button" class="btn" (click)="onLogin()">SUBMIT</button>
+            <button type="button" class="btn" (click)="onLogin()">submit</button>
           </form>
     </div>
       <div *ngIf="token.length > 0">
         Logged In.
       </div>
-</div>
-</div>
+
+      
+  </div>  
+</div>       
+    
+
+
