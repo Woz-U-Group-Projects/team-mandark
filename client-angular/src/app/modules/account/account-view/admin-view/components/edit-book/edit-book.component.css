@@ -27,6 +27,15 @@ a {
   background-size: cover;
   border: solid ivory 2px;
 }
+.row{
+  color: ivory;
+  font-family: 'Syncopate', sans-serif;
+  text-align: center;
+  margin-top: 300px;
+}
+.text {
+  text-decoration: underline;
+}
 ul {
     list-style-type: none;
     font-size: 1.5em;
