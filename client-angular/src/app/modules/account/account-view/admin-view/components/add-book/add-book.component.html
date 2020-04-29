@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md">
     <!-- Brand -->
-    <h1 class="navbar-brand" href="#"><a href="/home"> eLIBRARY</a></h1>
+    <h1 class="navbar-brand" href="#"><a href="/admin"> eLIBRARY ADMIN</a></h1>
   
     <!-- Toggler/collapsibe Button -->
     <button
@@ -18,27 +18,56 @@
       id="collapsibleNavbar"
     >
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/login">LOGIN</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#" routerLink="/booksView">BOOKS</a>
-        </li>
+        
       </ul>
     </div>
   </nav>
 <div class="bg">
-    <div class="header">
-        <h1>LIBARAY</h1>
-        <h1>ADD BOOKS TO LIBRARY</h1>
-        BOOK ID:<input [(ngModel)]="newBook.book_id"><br>
+    <div class="row align-items-center">
+      <div class="col-3"></div>
+      <div class="col-3">
+        <h1><a>ADD BOOKS TO LIBRARY</a></h1>
+        <div class="form-group">
+          <label for="book">BOOK ID</label>
+          <input [(ngModel)]="newBook.book_id" type="text" class="form-control" id="book">
+          <label for="book">TITLE</label>
+          <input [(ngModel)]="newBook.title" type="text" class="form-control" id="book">
+          <label for="book">AUTHOR</label>
+          <input [(ngModel)]="newBook.author" type="text" class="form-control" id="book">
+          <label for="book">PUBLISHER</label>
+          <input [(ngModel)]="newBook.publisher" type="text" class="form-control" id="book">
+          <label for="book">DESCRIPTION</label>
+          <input [(ngModel)]="newBook.description" type="text" class="form-control" id="book">
+          <label for="book">DATE PUBLISHED</label>
+          <input [(ngModel)]="newBook.pub_date" type="text" class="form-control" id="book">
+        
+        <button (click)="addBook()" type="button" class="btn">SUBMIT</button>
+      </div>
+      <div class="col-3"></div>
+    </div>  
+</div>  
+
+<!--<div class="form-group">
+  <label for="book">BOOK ID</label>
+  <input [(ngModel)]="newBook.book_id" type="text" class="form-control" id="book">
+  <label for="book">TITLE</label>
+  <input [(ngModel)]="newBook.title" type="text" class="form-control" id="book">
+  <label for="book">AUTHOR</label>
+  <input [(ngModel)]="newBook.author" type="text" class="form-control" id="book">
+  <label for="book">PUBLISHER</label>
+  <input [(ngModel)]="newBook.publisher"> type="text" class="form-control" id="book">
+  <label for="book">DESCRIPTION</label>
+  <input [(ngModel)]="newBook.description"> type="text" class="form-control" id="book">
+  <label for="book">DATE PUBLISHED</label>
+  <input [(ngModel)]="newBook.pub_date"> type="text" class="form-control" id="book">
+
+  BOOK ID:<input [(ngModel)]="newBook.book_id"><br>
         TITLE:<input [(ngModel)]="newBook.title"><br>
         AUTHOR:<input [(ngModel)]="newBook.author"><br>
         PUBLISHER:<input [(ngModel)]="newBook.publisher"><br>
         DESCRIPTION:<input [(ngModel)]="newBook.description"><br>
         DATE PUBLISHED:<input [(ngModel)]="newBook.pub_date"><br>
-        <button (click)="addBook()" type="button" class="btn">SUBMIT</button>
 
-        <a href="#" routerLink="/admin">BACK</a>
-    </div>  
-</div>     
+</div>-->
+    
+    

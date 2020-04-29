@@ -18,6 +18,7 @@ html {
 a {
   color: ivory;
   font-family: 'Syncopate', sans-serif;
+  text-decoration: underline;
 }
 .bg {
   background-image: url("../../../../../../../assets/pexels-photo-590493.jpeg");
@@ -27,7 +28,25 @@ a {
   background-size: cover;
   border: solid ivory 2px;
 }
-ul {
-    list-style-type: none;
-    font-size: 1.5em;
+.row{
+  padding-top: 30px;
 }
+.form-group{
+  text-align: center;
+  color: ivory;
+  font-family: 'Syncopate', sans-serif;
+}
+.col-3 {
+  align-items: center;
+  margin-left: 80px;
+}
+.btn {
+  color: ivory;
+}
+.btn:hover{
+  text-decoration: underline;
+}
+
+
+
+
