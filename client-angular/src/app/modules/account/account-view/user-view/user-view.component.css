@@ -17,6 +17,7 @@ html {
 a {
     color: ivory;
     font-family: 'Syncopate', sans-serif;
+    text-align: center;
 }
 .bg {
     background-image: url("../../../../../assets/pexels-photo-590493.jpeg");
@@ -29,23 +30,46 @@ a {
   .row{
     padding-top:15px;
     margin-left: 15px;
-    
   }
   .col-4{
     border: 2px solid ivory;
     height: 600px;
     padding-top:10px;
-    justify-content: center;
-    
+    text-align: center;
   }
   .col-8{
     color: ivory;
     font-family: 'Syncopate', sans-serif;
+    list-style: none;
   }
   h4{
     color: ivory;
     padding-left: 25px;
     padding-top:5px;
     font-family: 'Syncopate', sans-serif;
-    border-bottom: ivory 1px solid;
+    text-decoration: underline;
+  }
+  ul{
+    list-style: none;
+    text-align: center;
+  }
+  .list{
+    padding-top: 1em;
+  }
+  .userLibaray{
+    padding-top: 3em;
+    text-align: center;
+    margin-right: 2em;
+  }
+  .btn{
+    background-color: transparent;
+    color: ivory;
+    padding-bottom: 0em;
+  }
+  .btn:hover{
+    background-color: ivory;
+    color: rgb(32, 32, 32);
+  }
+  h1{
+    text-decoration: underline;
   }
