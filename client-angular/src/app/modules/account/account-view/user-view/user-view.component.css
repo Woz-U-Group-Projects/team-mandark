@@ -41,6 +41,7 @@ a {
     color: ivory;
     font-family: 'Syncopate', sans-serif;
     list-style: none;
+    
   }
   h4{
     color: ivory;
@@ -55,11 +56,14 @@ a {
   }
   .list{
     padding-top: 1em;
+    padding-right: 30px;
+    
   }
   .userLibaray{
     padding-top: 3em;
     text-align: center;
     margin-right: 2em;
+    
   }
   .btn{
     background-color: transparent;
