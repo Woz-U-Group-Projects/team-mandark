@@ -1,13 +1,13 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AccountModule } from "./modules/account/account.module";
+import { AppRoutingModule } from './app-routing.module';
+import { AccountModule } from './modules/account/account.module';
 import { BookHistoryComponent } from './modules/account/components/book-history/book-history.component';
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
 import { NavbarComponent } from './Shared/components/navbar/navbar.component';
 import { HeaderComponent } from './Shared/components/header/header.component';
 
@@ -44,16 +44,75 @@ import { ViewUserComponent } from './modules/account/account-view/admin-view/com
 import { AddUserComponent } from './modules/account/account-view/admin-view/components/add-user/add-user.component';
 import { DeleteUserComponent } from './modules/account/account-view/admin-view/components/delete-user/delete-user.component';
 import { EditUserComponent } from './modules/account/account-view/admin-view/components/edit-user/edit-user.component';
+import {AlertComponent} from './Shared/components/alert.component';
+import {JwtInterceptor} from './helpers/jwt.interceptor';
+import {ErrorInterceptor} from './helpers/error.interceptor';
+import {RouterModule, Routes} from '@angular/router';
 
 
 @NgModule({
-  imports: [BrowserModule, AccountModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule],
-  declarations: [AppComponent, NavbarComponent, BookHistoryComponent, HeaderComponent, HomeViewComponent, AccountViewComponent, BookInfoViewComponent, ELibraryViewComponent, LoginViewComponent, RegisterViewComponent, FiltersComponent, SearchComponent, RecBooksComponent, UserLoginComponent, CreateUserComponent, AuthenticationComponent, FooterComponent, TeamInfoComponent, UserViewComponent, AdminViewComponent, AddBookComponent, DeleteBookComponent, ViewBooksComponent, EditBookComponent, ViewUserComponent, AddUserComponent, DeleteUserComponent, EditUserComponent],
-  providers: [FiltersService, SearchService, RecBooksService, UserLoginService, CreateUserService, BookService, UserService, HttpClient],
+  imports: [
+    BrowserModule,
+    AccountModule,
+    AppRoutingModule,
+    FormsModule, HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+  ],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    BookHistoryComponent,
+    HeaderComponent,
+    HomeViewComponent,
+    AccountViewComponent,
+    BookInfoViewComponent,
+    ELibraryViewComponent,
+    LoginViewComponent,
+    RegisterViewComponent,
+    FiltersComponent,
+    SearchComponent,
+    RecBooksComponent,
+    UserLoginComponent,
+    CreateUserComponent,
+    AuthenticationComponent,
+    FooterComponent,
+    TeamInfoComponent,
+    UserViewComponent,
+    AdminViewComponent,
+    AddBookComponent,
+    DeleteBookComponent,
+    ViewBooksComponent,
+    EditBookComponent,
+    ViewUserComponent,
+    AddUserComponent,
+    DeleteUserComponent,
+    EditUserComponent,
+    AlertComponent
+  ],
+  providers: [
+    FiltersService,
+    SearchService,
+    RecBooksService,
+    UserLoginService,
+    CreateUserService,
+    BookService,
+    UserService,
+    HttpClient,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 
 })
+
 export class AppModule { }
+
+
 
 
 

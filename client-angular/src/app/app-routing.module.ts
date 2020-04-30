@@ -29,41 +29,86 @@ import { DeleteUserComponent } from './modules/account/account-view/admin-view/c
 import { EditUserComponent } from './modules/account/account-view/admin-view/components/edit-user/edit-user.component';
 import { ViewUserComponent } from './modules/account/account-view/admin-view/components/view-user/view-user.component';
 import { ViewBooksComponent } from './Shared/components/view-books/view-books.component';
+import {AuthGuard} from './helpers/auth.gaurd';
+import {Role} from './Shared/models/Role';
 
 
 
 
 const routes: Routes = [
 
-  { path: '', component: HomeViewComponent },
-  { path: 'home', component: HomeViewComponent },
-  { path: 'login', component: LoginViewComponent },
-  { path: 'register', component: RegisterViewComponent },
-  { path: 'userHome', component: UserViewComponent },
-  { path: 'admin', component: AdminViewComponent },
-  
-  
-  
-  // Admin routes
-  { path: 'bookAdd', component: AddBookComponent },
-  { path: 'bookView', component: ViewBooksComponent },
-  { path: 'bookDelete', component: DeleteBookComponent },
-  { path: 'bookEdit/:title', component: EditBookComponent },
-  { path: 'userAdd', component: AddUserComponent },
-  { path: 'userView', component: ViewUserComponent },
-  { path: 'userDelete', component: DeleteUserComponent },
-  { path: 'userEdit/:username', component: EditUserComponent },
-  
+  {
+    path: '',
+    component: HomeViewComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'home',
+    component: HomeViewComponent
+  },
+  {
+    path: 'login',
+    component: LoginViewComponent
+  },
+  {
+    path: 'register',
+    component: RegisterViewComponent
+  },
+  {
+    path: 'userHome',
+    component: UserViewComponent
+  },
+  {
+    path: 'admin',
+    component: AdminViewComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.Admin] }
+  },
 
-  
+
+
+  // Admin routes
+  {
+    path: 'bookAdd',
+    component: AddBookComponent
+  },
+  {
+    path: 'bookView',
+    component: ViewBooksComponent
+  },
+  {
+    path: 'bookDelete',
+    component: DeleteBookComponent
+  },
+  {
+    path: 'bookEdit/:title',
+    component: EditBookComponent
+  },
+  {
+    path: 'userAdd',
+    component: AddUserComponent
+  },
+  {
+    path: 'userView',
+    component: ViewUserComponent
+  },
+  {
+    path: 'userDelete',
+    component: DeleteUserComponent
+  },
+  {
+    path: 'userEdit/:username',
+    component: EditUserComponent
+  }
+
   // { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
   // { path: '**', component: FirstComponent },
   // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), CommonModule],
-  exports: [RouterModule,],
+  exports: [RouterModule],
   declarations: []
 })
 export class AppRoutingModule { }

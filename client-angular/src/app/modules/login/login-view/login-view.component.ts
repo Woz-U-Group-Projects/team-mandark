@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import { LoginModule} from '../login.module';
+import {User} from '../../../Shared/models/user';
+import {Router, ActivatedRoute} from '@angular/router';
+import {AlertService} from '../../../services/alert.service';
+import {AuthenticationService} from '../../../services/authentication.service';
+import {pipe} from 'rxjs';
+import {first} from 'rxjs/operators';
+import {LoginModule} from '../login.module';
+import {ifStmt} from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-login-view',
@@ -11,22 +18,49 @@ export class LoginViewComponent implements OnInit {
 
   title = 'angular-api-eater';
   token = '';
-  LoginModule: LoginModule = new LoginModule();
+  LoginModule: User = new User();
   error: string;
-  // tslint:disable-next-line:variable-name
   base_url = 'http://localhost:8080/';
   data: any;
+  userUrl: string;
+  adminUrl: String;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private route: ActivatedRoute,
+    private router: Router,
+    private authenticationService: AuthenticationService,
+    private alertService: AlertService
+  ) {
+    // redirect to home if already logged in
+    if (this.authenticationService.currentUserValue) {
+      this.router.navigate(['/']);
+    }
+  }
 
   ngOnInit() {
+    this.userUrl = this.route.snapshot.queryParams['/userHome'] || '/';
+    this.adminUrl = this.route.snapshot.queryParams['/admin'] || '/';
   }
   onLogin() {
-    this.http.post<any>(this.base_url + 'login', { username: this.LoginModule.username, password: this.LoginModule.password }, { observe: 'response' })
+    this.alertService.clear();
+    // tslint:disable-next-line:max-line-length
+    // this.http.post<any>(this.base_url + 'login', { username: this.LoginModule.username, password: this.LoginModule.password }, /*{ observe: 'response' }*/)
+   //   .subscribe(
+    //    data => {
+   //     this.router.navigate([this.returnUrl]);
+   //     },
+   //     error => this.error = 'Unable to login with username and password.'
+   //   );
+    this.authenticationService.login(User.username, User.password)
+      .pipe(first())
       .subscribe(
-        res => this.token = res.headers.get('Authorization'),
-        error => this.error = 'Unable to login with username and password.'
-      );
+        data => {
+          this.router.navigate([this.userUrl]);
+        },
+        error => {
+          this.alertService.error(error);
+        });
   }
 
   getValues() {

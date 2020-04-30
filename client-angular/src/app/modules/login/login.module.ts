@@ -17,6 +17,14 @@ import { FooterComponent } from 'src/app/Shared/components/footer/footer.compone
 
 })
 export class LoginModule {
+  id: number;
   username: string;
   password: string;
+  is_admin: boolean;
+  num_of_books: number;
+  overdue_book: number;
+  history: string;
+  token: string;
+  static password: string;
 }
+

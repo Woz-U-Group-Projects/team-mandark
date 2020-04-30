@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { User } from '../../../../../../Shared/models/user'
 import { UserService } from 'src/app/Shared/services/user.service';
+import {AuthenticationService} from '../../../../../../services/authentication.service';
+import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'app-view-user',
@@ -11,19 +13,23 @@ import { UserService } from 'src/app/Shared/services/user.service';
 })
 export class ViewUserComponent implements OnInit {
 
-  public user: User[];
+  currentUser: User;
+  users = [];
 
-  constructor(private userService: UserService) { }
-
-  getUsers(): void{
-    this.userService.getUsers().subscribe(user => {
-      this.user = user;
-      console.log('User', this.user);
-    })
+  constructor(
+    private authenticationService: AuthenticationService,
+    private userService: UserService
+  ) {
+    this.currentUser = this.authenticationService.currentUserValue;
   }
 
   ngOnInit() {
-    this.getUsers();
+    this.loadAllUsers();
   }
 
+  private loadAllUsers() {
+    this.userService.getAll()
+      .pipe(first())
+      .subscribe(users => this.users = users);
+  }
 }

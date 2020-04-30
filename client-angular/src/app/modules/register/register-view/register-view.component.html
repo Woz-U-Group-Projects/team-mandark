@@ -28,17 +28,25 @@
   </div>
 </nav>
 <div class="bg">
+<<<<<<< Updated upstream
   <div class="row">
     <div class="col-3"></div>
       <div class="col-3">
         
           <div *ngIf="token.length == 0">
             <div style="color: #ff0000; font-weight: bold;">{{(error ? error : '')}}</div>
+=======
+  <div class="header">
+    <!-- <h2>REGISTER</h2>
+      <div *ngIf="token.length == 0">
+        <div style="color: #ff0000; font-weight: bold;">{{(error ? error : '')}}</div>
+>>>>>>> Stashed changes
 
             <form class="stuff">
               <label class="un" htmlFor="username"><a>USERNAME</a></label><br>
               <input type="text" id="username" name="username" [(ngModel)]="LoginModule.username" /><br>
 
+<<<<<<< Updated upstream
               <label class="pw" htmlFor="password"><a>PASSWORD</a></label><br>
               <input type="password" id="password" name="password" [(ngModel)]="LoginModule.password" /><br>
               <button type="button" class="btn" (click)="onLogin()"><a>REGISTER</a></button>
@@ -49,3 +57,36 @@
 </div> 
 
      
+=======
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="LoginModule.password" /><br>
+          <button type="button" class="btn" (click)="onLogin()">SUBMIT</button>
+        </form>
+    </div>  -->
+    <h2>Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Password is required</div>
+          <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Register
+        </button>
+        <a routerLink="/login" class="btn btn-link">Cancel</a>
+      </div>
+    </form>
+</div>
+>>>>>>> Stashed changes

@@ -2,7 +2,7 @@
   <!-- Brand -->
   <h1 class="navbar-brand" href="#">eLIBRARY ADMIN</h1>
 
-  <!-- Toggler/collapsibe Button 
+  <!-- Toggler/collapsibe Button
   <button
     class="navbar-toggler"
     type="button"
@@ -21,7 +21,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#" routerLink="/login">LOGOUT</a>
       </li>
-     </ul>  
+     </ul>
   </div>
 </nav>
 <div class="bg">
@@ -37,6 +37,10 @@
             </ul>
             <br>-->
             <!--LIBARARY INFOMATION-->
+            <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+            <ul *ngIf="users">
+              <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+            </ul>
             <div class="options">
               <ul>
                 <li><a href="#" routerLink="/bookView">VIEW BOOK</a></li>
@@ -47,11 +51,11 @@
             </div>
           </nav>
         <div class="col"></div>
-  </div>  
-</div>   
-            
-          
-  
-      
-     
-  
+  </div>
+</div>
+
+
+
+
+
+

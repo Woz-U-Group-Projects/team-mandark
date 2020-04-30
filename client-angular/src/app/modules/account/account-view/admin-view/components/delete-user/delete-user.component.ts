@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/Shared/services/user.service';
 import { User } from 'src/app/Shared/models/user';
+import {AuthenticationService} from '../../../../../../services/authentication.service';
+import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'app-delete-user',
@@ -8,20 +10,29 @@ import { User } from 'src/app/Shared/models/user';
   styleUrls: ['./delete-user.component.css']
 })
 export class DeleteUserComponent implements OnInit {
+  currentUser: User;
+  users = [];
 
-  public user: User[];
-
-  constructor(private userService: UserService) { }
-
-  getUser(): void{
-    this.userService.getUsers().subscribe(user => {
-      this.user = user;
-      console.log('User', this.user);
-    })
+  constructor(
+    private authenticationService: AuthenticationService,
+    private userService: UserService
+  ) {
+    this.currentUser = this.authenticationService.currentUserValue;
   }
 
   ngOnInit() {
-    this.getUser();
+    this.loadAllUsers();
   }
 
+  deleteUser(id: number) {
+    this.userService.deleteUser(id)
+      .pipe(first())
+      .subscribe(() => this.loadAllUsers());
+  }
+
+  private loadAllUsers() {
+    this.userService.getAll()
+      .pipe(first())
+      .subscribe(users => this.users = users);
+  }
 }
